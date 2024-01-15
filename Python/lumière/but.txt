@@ -1,0 +1,1 @@
+le but de ce "jeu" est déteindre les limières mais lorsque l'on appuie sur un bouton, cela éteint la case sélectionné mais aussi ces voisines (diagonales exclu)

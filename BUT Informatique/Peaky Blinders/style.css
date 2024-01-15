@@ -1,0 +1,552 @@
+body{
+    background: #444;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+nav, section{
+    background: #333;
+}
+
+section{
+    border-radius: 6px;
+    border-top: 0.5px solid #FF122A;
+    border-right: 2px solid #FF122A;
+    border-bottom: 1px solid #FF122A;
+    border-left: 0.5px solid #FF122A;
+    padding: 25px;
+}
+
+header, main, footer{
+    margin-left: 70px;
+    padding-left: 79px;
+    padding-right: 70px;
+}
+
+a:link, a:hover, a:active, a:visited{
+    color: white;
+}
+
+
+/*******************/
+/****** NAV ********/
+/*******************/
+
+nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    border-right: 1.5px solid #FF122A;
+    width: 70px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav img{
+    width: 25px;
+    height: 25px;
+    padding-top: 48px;
+}
+
+
+nav img:first-child{  /****image menu burger****/
+    padding-top: 28px;
+}
+
+nav img:nth-child(2){  /****image de l'icone d'acceuil***/
+    padding-top: 90px;
+}
+
+/**********************/
+/****** HEADER ********/
+/*******************/
+
+header{
+    padding-top: 56px;
+    margin-bottom: 43px;
+
+}
+
+header img:first-child{  /*****image logo***/
+    z-index: 3;
+    position: fixed;
+    left: 69px;
+    top: 0px;
+}
+
+header div{  /***l'ensemble affiche (poster + interdiction -16)**/
+    position: relative; 
+}
+
+header div img:first-child{ /***poster**/
+    position: relative;
+    z-index: 0;
+    
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 0;
+    box-shadow: 15px 15px 20px 0px rgba(0, 0, 0, 0.25);
+}
+
+header div img:nth-child(2){ /*** interdiction -16ans**/
+    position: absolute;
+    right: 0;
+    width: 10%;
+    height: 20%;
+    z-index: 1;
+}
+
+h1{
+    text-align: center;
+    font-family: "Overpass", sans-serif;
+    text-transform: uppercase;
+    font-size:9vw;
+    
+    font-weight: 700;
+    padding-top: 35px;
+    margin: 0;
+}
+
+blockquote{
+    height: fit-content;
+    text-align: center;
+    font-family: "Overpass", sans-serif;
+    font-size: 3.5vw;
+    
+}
+
+/**********************/
+/****** MAIN ********/
+/*******************/
+
+main > section{
+    padding: 25px;
+    margin-top: 43px;
+}
+
+hr{
+    width: 100%;
+}
+
+h2{
+    text-align: center;
+    font-family: "Overpass", sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    margin: 0;
+}
+
+
+/** section bande annonce (page accueil) */
+
+main section:first-child{ 
+    text-align: justify;
+    margin-top: 0;
+    min-height: 232px;
+    min-width: 470px;
+    
+}
+
+iframe{ /**la vidéo **/
+    width: 472px;
+    height: 200px;
+    float: left;
+    margin-right: 25px;
+}
+
+main > section:first-child p{
+    clear: right;
+    margin: 0;
+}
+/********************************************/
+
+
+/******** ensemble des lignes (ligne 1 : section information + section casting) (ligne2 : section inrockuptible + section critctoo) (page acceuil) ********/
+
+main > div{ /**conteneur des deux lignes**/
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+main > div > div{ /***chacune des lignes**/
+    display: flex;
+    flex-direction: row;
+    margin-top: 43px;
+
+}
+/*******************************************************************************************************************************************************/
+
+/**titre section information et titre section casting avec la barre en dessous (page acceuil)*/
+
+main > div div:first-child section:first-child div:first-child, main > div div:first-child section:last-child div:first-child{
+    width: fit-content;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+}
+/*********************************************************************************************/
+
+/** section information (page accueil) */
+
+main > div  div:first-child section:first-child{ 
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width: 580px;
+    min-width: 300px;
+    padding-left: 43px;
+    padding-right: 25px;
+    flex: 2;
+    align-items: stretch;
+}
+
+main > div div:first-child section:first-child div:nth-child(2){ /** bloc d'un ensemble de paragraphe alant de "genre" à "prix gagnés : ici"***/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+main > div div:first-child section:first-child div:last-child{ /** bloc d'un ensemble de paragraphe allant de "- presse" à "23 705 notes)" ***/
+    text-indent: 25px;
+}
+
+main > div div:first-child section:first-child p{
+    margin-top: 28px;
+    margin-bottom: 0;
+}
+
+main > div div:first-child section:first-child div:last-child p{ /** chacun des parargraphe "- presse.." et "- spectateur.."***/
+    margin: 0;
+}
+
+/**********************************************/
+
+/******** section casting (page d'accueil) *******/
+
+
+main > div div:first-child section:last-child{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 45px;
+    
+    margin-top: 0;
+    margin-left: 43px;
+    
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+}
+
+
+
+main > div div:first-child section:last-child article{ /***ensemble image + nom acteur****/
+    display: flex;
+}
+
+main > div div:first-child section:last-child article p{ /**nom des acteurs***/
+    display: flex;
+    align-self: center;
+
+    width: 223px;
+    height: 65px;
+    text-align: center;
+}
+
+main > div div:first-child section:last-child article img{ /***images des acteurs**/
+    margin-right: 3vw;
+    border-radius: 64.015px;
+    box-shadow: 15px 15px 20px 0px rgba(0, 0, 0, 0.25);
+}
+
+main > div div:first-child section:last-child div article:nth-child(2){ /** ensemble image + nom acteur de paul anderson**/
+    align-self: end;
+}
+
+main > div div:first-child section:last-child div article:nth-child(2) img{ /*** image paul anderson**/
+    order: 1;
+    margin-right: 0;
+    margin-left: 3vw;
+}
+
+
+main > div div:first-child section:last-child div:last-child{ /** conteneur des 3 ensembles (rappel : un ensemble = image + nom acteur)**/
+    
+    display: flex;
+    flex-direction: column;
+}
+/***************************************************************/
+
+/********************** chaque blocs critiques (page accueil)************************/
+main > div  div:last-child section, main > section:last-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > div  div:last-child p , main > section:last-child p{
+    align-self: start;
+    margin-bottom: 0;
+}
+/**************************************************************************************/
+
+/*** section inrockuptible (page accueil)***/
+main > div div:last-child section:first-child{
+    margin-right: 43px;
+    max-width: 810px;
+    min-width: 300px;
+    flex: 2;
+}
+
+
+/*********************************/
+
+/*** section critictoo (page accueil)****/
+
+main > div div:last-child section:last-child{
+    flex: 2;
+    min-width: 300px;
+}
+
+/***********************************/
+
+main > div div:last-child section div{ /***ensemble paragraphe + "source :" (permet de faire l'écart entre les deux et que le mot "source :" se mette en bas de section)***/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+
+/**********************/
+/****** FOOTER ********/
+/*******************/
+
+footer{
+    margin-top: 43px;
+    margin-bottom: 43px;
+}
+
+footer section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+
+}
+
+footer section p{
+    display: inline-block;
+    margin: 0;
+}
+
+footer section article:first-child p:first-child{ /** paragraphe "tabas'kho"**/
+
+    text-align: justify;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+footer section article:last-child p{ /**ensemble des paragraphe allant de "© 2023" à "the rightful owner."**/
+    color: #DDD;
+    vertical-align: baseline ;
+
+    font-size: 15px;
+    font-weight: 300;
+}
+
+/*********************************************************************************************************/
+/*********************************************************************************************************/
+/******************************** MEDIA **********************************************/
+/*********************************************************************************************************/
+/*********************************************************************************************************/
+
+
+@media (max-width: 1110px) {
+
+    body{
+        font-size: 20px;
+    }
+
+    header, main, footer{
+        margin-left: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /*******************/
+    /****** NAV ********/
+    /*******************/
+
+    nav{
+        z-index: 2;
+        border-bottom: 1.5px solid #FF122A;
+        height: 70px;
+        width: 100%;
+        flex-direction: row;
+    }
+    
+    nav img{
+        display: none;
+    }
+    
+    nav img:first-child{
+        display: block;
+        padding-top: 0;
+        padding-left: 28px;
+    }
+
+    /**********************/
+    /****** HEADER ********/
+    /*******************/
+
+    header{
+        margin-top: 70px;
+        padding-top: 36px;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-bottom: 30px;
+    }
+
+    header img:first-child{ /**logo**/
+        position: fixed;
+        left: auto;
+        right: 0;
+        top: 0;
+    }
+
+    h1{
+        padding-top: 25px
+    }
+
+    blockquote{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /**********************/
+    /****** MAIN ********/
+    /*******************/
+
+    h2{
+        font-size: 35px;
+    }
+
+    /** section b.a de la page accueil */
+
+    main > section:first-child{
+        text-indent: 40px;
+        display: flex;
+        flex-direction: column;
+        min-width: 300px;
+        position: relative;
+        overflow-x: hidden;
+        
+    }
+
+    iframe{ /****vidéo*****/
+        align-self: center;
+        width:calc(100% - (2 * 40px)); 
+        height: auto;
+        flex-shrink: 2;
+        float: none;
+        
+        margin-right: 0;
+        margin-bottom: 10px;
+        
+        
+    }
+    /**********************************/
+
+    /******** ensemble bloc information + casting et bloc inrockuptible + critictoo ********/
+
+    main > div > div{
+        display: flex;
+        flex-direction: column;
+        margin-top: 43px;
+    }
+    /******************************************************************************/
+
+    /** section information de la page accueil */
+
+    main > div  div:first-child section:first-child{
+        max-width: none;
+        margin-bottom: 43px;
+    }
+    /******************************************/
+
+    /******* section casting *******/
+    main > div div:first-child section:last-child{
+        margin-left: 0;
+        align-items: center;
+    }
+    /********************************/
+
+    /******** les images de la section casting  ******/
+    main > div div:first-child section:last-child img{
+        display: none;
+    }
+    /*************************************************/
+
+    /*** section inrockuptible ***/
+    main > div div:last-child section:first-child{
+        margin-right: 0;
+        max-width: none;
+    }
+
+    main > div div:last-child section:first-child img{
+        width: 200px;
+    }
+    /********************************/
+
+    /*** section critictoo ****/
+
+    main > div div:last-child section:last-child{
+        display: none;
+    }
+    /***************************/
+
+    /***** section télé loisir*****/
+    main > section:last-child{
+        display: none;
+    } 
+    /*******************************/
+
+    /**********************/
+    /****** FOOTER ********/
+    /*******************/
+
+    footer section{
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    /*** paragraphe droit grisé****/
+
+    footer section article:last-child{
+        margin-top: 25px;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    footer section article:last-child p{ /**ensemble des paragraphe allant de "© 2023" à "the rightful owner."**/
+    
+        font-size: 12px;
+    }
+
+    
+
+}
